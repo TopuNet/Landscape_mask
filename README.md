@@ -19,4 +19,4 @@
 
 效果
 --------------
-[http://twedding.cn/test/baike](http://twedding.cn/test/baike)
+[http://twedding.cn/test/landscape_mask](http://twedding.cn/test/landscape_mask)
