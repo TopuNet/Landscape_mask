@@ -1,4 +1,4 @@
-# Landscape_mask
+# Landscape_mask v1.0.2
 ### 横屏遮罩（主要移动端使用）
 
 文件结构：
@@ -20,3 +20,10 @@
 效果
 --------------
 [http://twedding.cn/test/landscape_mask](http://twedding.cn/test/landscape_mask)
+
+
+更新日志
+--------------
+v1.0.2
+
+		修改弹出层的定位为fixed
