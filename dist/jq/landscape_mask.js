@@ -1,12 +1,12 @@
 /*
- *@ v1.0.2
+ *@ 1.1.1
  *@ 高京
- *@ 2015-10-09
+ *@ 20151009
  *@ 判断是否竖屏，横屏自动出黑屏动画
  */
 var landscape_mask = {
 
-    landscape_init: function() {
+    init: function() {
 
         landscape_mask.includeCSS("/inc/landscape_mask.min.css");
 
@@ -47,4 +47,10 @@ var landscape_mask = {
     }
 };
 
-landscape_mask.landscape_init();
+if(typeof define==="function" && define.amd){
+    define(function(){
+        return landscape_mask;
+    })
+}
+else
+    landscape_mask.init();
