@@ -23,6 +23,8 @@ v1.1.2
 
 		2. 之前版本 可以阻止遮罩的class="landscape_mask_no_focus" 不再使用。现在只要横屏就会遮罩。
 
+		3. 修改demo
+
 v1.1.1
 
 		1. 兼容原生JS和AMD规范
@@ -57,6 +59,3 @@ requireJS引用
 requireJS引用：
 
 		landscape_mask.init();
-
-
-在可能弹出键盘的input/select/textarea标签中，写入class="landscape_mask_no_focus"，可以在该控件拥有页面焦点时，阻止横屏遮罩。
