@@ -1,9 +1,14 @@
-# Landscape_mask v1.1.2
+# Landscape_mask v1.1.3
 ### 横屏遮罩（主要移动端使用）
 ### 兼容原生JS规范和AMD规范
 
 更新日志
 --------------
+v1.1.3
+
+        1. 在dist文件夹中，增加package.json
+        2. 将dist发布到npm：TopuNet-Landscape-Mask
+
 v1.1.2
 
 		1. 解决了一下之前的bug：页面配合mobile_stop_moved时不正常，和弹出软键盘时不正常
