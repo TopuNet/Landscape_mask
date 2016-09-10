@@ -1,5 +1,5 @@
 /*
- *@ 1.1.2
+ *@ 1.1.4
  *@ 高京
  *@ 20151009
  *@ 判断是否竖屏，横屏自动出黑屏动画
@@ -35,10 +35,10 @@ var landscape_mask = {
             // 如果当前屏幕朝向等于0，则隐藏遮罩，并return（屏蔽安卓input获得焦点后的resize）。
             // 如朝向不为0，则显示遮罩，并先使所有input,select失去焦点（收起软键盘）后，再重置遮罩层高度
             $("p.a").html($("p.a").html() + "<br />39:window-" + window.orientation);
-            if (window.orientation == 0) {
+            if (window.orientation === 0) {
                 _selector.removeClass("landscape_mask_show");
                 return;
-            } else if(!_selector.hasClass("landscape_mask_show"))
+            } else if (!_selector.hasClass("landscape_mask_show"))
                 _selector.addClass("landscape_mask_show");
 
             $("input,select").blur();
@@ -64,6 +64,6 @@ var landscape_mask = {
 if (typeof define === "function" && define.amd) {
     define(function() {
         return landscape_mask;
-    })
+    });
 } else
     landscape_mask.init();
