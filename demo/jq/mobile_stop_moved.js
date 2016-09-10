@@ -1,4 +1,4 @@
-// 2.0.1
+// 2.0.6
 var mobile_stop_moved = {
     /*
         opt:{
@@ -16,7 +16,7 @@ var mobile_stop_moved = {
         opt = $.extend(opt_default, opt);
 
         // 默认阻止
-        $(document).on("touchmove", function() {
+        $(document).on("touchmove", function(e) {
             e.preventDefault();
             e.stopPropagation();
         });
@@ -28,7 +28,8 @@ var mobile_stop_moved = {
             var clientY_start;
 
             $(document).on("touchstart", function(e) {
-                clientY_start = e.touches[0].clientY;
+                var touches = e.touches || e.originalEvent.touches;
+                clientY_start = touches[0].clientY;
             });
 
             $(document).unbind("touchmove").on("touchmove", function(e) {
@@ -36,12 +37,13 @@ var mobile_stop_moved = {
                 var scrollHeight = obj[0].scrollHeight; // 盒内内容实际滚动高度
                 var offsetHeight = obj.height(); // 盒高度
                 var scrollTop = obj.scrollTop(); // 盒内内容已滚动高度
-                var clientY_now = e.touches[0].clientY;
+                var touches = e.touches || e.originalEvent.touches;
+                var clientY_now = touches[0].clientY;
                 var canScroll = true;
 
                 var neednt = offsetHeight >= scrollHeight; // 不需要滚动（盒高度>=盒内容高度）
                 var topest = scrollTop == 0 && clientY_now > clientY_start; // 本身在页首，还往下拉动页面
-                var bottemest = scrollHeight == (scrollTop + offsetHeight) && clientY_now < clientY_start; // 本身在页尾，还往上拉动页面
+                var bottemest = scrollHeight <= (scrollTop + offsetHeight) && clientY_now < clientY_start; // 本身在页尾，还往上拉动页面
 
                 if (neednt || topest || bottemest) {
                     canScroll = false;

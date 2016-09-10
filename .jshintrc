@@ -1,5 +1,5 @@
 {
     "undef": true,
     "unused": true,
-    "predef": ["$", "window", "document", "navigator", "location", "console", "define", "BMap", "BMAP_ANIMATION_BOUNCE", "setTimeout"]
+    "predef": ["$", "window", "document", "navigator", "location", "console", "define", "BMap", "BMAP_ANIMATION_BOUNCE", "setTimeout", "require"]
 }

@@ -1,6 +1,6 @@
 # Landscape_mask v1.1.4
 ### 横屏遮罩（主要移动端使用）
-### 兼容原生JS规范和AMD规范
+### 安装：npm install TopuNet-Landscape-Mask
 
 文件结构：
 -------------
@@ -33,6 +33,11 @@ requireJS引用：
 --------------
 v1.1.4
 		1. 通过jshint验证
+		
+v1.1.3
+
+        1. 在dist文件夹中，增加package.json
+        2. 将dist发布到npm：TopuNet-Landscape-Mask
 
 v1.1.2
 
