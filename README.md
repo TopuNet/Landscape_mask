@@ -32,8 +32,9 @@ requireJS引用：
 更新日志
 --------------
 v1.1.4
+
 		1. 通过jshint验证
-		
+
 v1.1.3
 
         1. 在dist文件夹中，增加package.json
