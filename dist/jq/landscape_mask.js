@@ -1,5 +1,5 @@
 /*
- *@ 1.1.5
+ *@ 1.1.6
  *@ 高京
  *@ 20151009
  *@ 判断是否竖屏，横屏自动出黑屏动画
@@ -32,7 +32,7 @@ var landscape_mask = {
 
         // 监听窗口大小改变（安卓弹出软键盘时，也会触发）
         var resize_n = 0;
-        $(window).resize(function() {
+        var deal_resize = function() {
             // 如果当前屏幕朝向等于0，则隐藏遮罩，并return（屏蔽安卓input获得焦点后的resize）。
             // 如朝向不为0，则显示遮罩，并先使所有input,select,textarea失去焦点（收起软键盘）后，再重置遮罩层高度
             // $("p.a").html($("p.a").html() + "<br />39:window-" + window.orientation);
@@ -49,7 +49,11 @@ var landscape_mask = {
                 // changeDo();
                 resize_n = 0;
             }, 0);
+        };
+        $(window).resize(function() {
+            deal_resize();
         });
+        deal_resize();
     },
 
     includeCSS: function(path) {

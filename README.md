@@ -1,4 +1,4 @@
-# Landscape_mask v1.1.5
+# Landscape_mask v1.1.6
 ### 移动端横屏遮罩
 ### 安装：npm install TopuNet-Landscape-Mask
 
@@ -31,6 +31,10 @@ requireJS引用：
 
 更新日志
 --------------
+v1.1.6
+
+		1. 修复横屏进入页面时，没有自动执行横屏遮罩的bug
+
 v1.1.5
 
 		1. 横屏遮罩弹出前，blur掉的元素增加textarea
