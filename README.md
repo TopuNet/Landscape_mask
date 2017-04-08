@@ -1,5 +1,5 @@
-# Landscape_mask v1.1.4
-### 横屏遮罩（主要移动端使用）
+# Landscape_mask v1.1.5
+### 移动端横屏遮罩
 ### 安装：npm install TopuNet-Landscape-Mask
 
 文件结构：
@@ -31,6 +31,11 @@ requireJS引用：
 
 更新日志
 --------------
+v1.1.5
+
+		1. 横屏遮罩弹出前，blur掉的元素增加textarea
+		2. 不再用js在每次弹层时计算弹层高度，直接使用css中的"100vh"，解决ios 10.3.1 safari中错位问题。
+
 v1.1.4
 
 		1. 通过jshint验证
